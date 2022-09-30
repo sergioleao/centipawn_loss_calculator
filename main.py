@@ -8,12 +8,11 @@ import matplotlib.pyplot as plt
 
 start = datetime.now()
 
-stockfish = Stockfish(path="/usr/local/Cellar/stockfish/15/bin/stockfish", 
-                      depth=22, parameters={"Threads": 4, "Hash": 32768})
+stockfish = Stockfish(path="centipawn_loss_calculator\stockfish_15_x64_bmi2.exe" ,depth=22)
 
 stockfish.get_parameters()
 
-pgn = open("Li, Ben_vs_Niemann, Hans Moke_2021.07.22.pgn")
+pgn = open(r"centipawn_loss_calculator\1.pgn","r")
 game = chess.pgn.read_game(pgn)
 game.headers["Event"]
 game.headers["Date"]
